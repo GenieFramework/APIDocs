@@ -3,7 +3,7 @@
 root=$(pwd)
 mkdir -p packages
 # List of repositories
-declare -a repos=("genie.jl" "stipple.jl" "searchlight.jl")
+declare -a repos=("genie.jl" "stipple.jl" "searchlight.jl" "stippleUI.jl")
 
 # Iterate over repositories
 for repo in "${repos[@]}"; do

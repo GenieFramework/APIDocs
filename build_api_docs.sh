@@ -1,5 +1,6 @@
 #!/bin/zsh
 root_folder="$(pwd)"
+mkdir -p $1
 output_folder="$(realpath $1)/"
 shift
 
@@ -30,10 +31,9 @@ fi
 # typeset -A folder_map
 # folder_map=("genie" "2.server" "stipple" "3.UI" "searchlight" "4.database")
 declare -A folder_map
-folder_map=( ["genie"]="2.server" ["stipple"]="3.UI" ["searchlight"]="4.database" )
+folder_map=( ["genie"]="2.server" ["stipple"]="3.UI" ["stippleui"]="3.UI/components" ["searchlight"]="4.database" )
 
 # Iterate over the arguments (folder names)
-echo $folder_map
 for folder_name in "$@"; do
     echo "Processing $folder_name"
     process_folder "packages/$folder_name" "$output_folder${folder_map[$folder_name]}"
