@@ -10,8 +10,7 @@ The `build_docs_gf.sh` script builds the guides on genieframework.com
  
 The `build_api_docs.sh` builds the API documentation
 
-Before running either script do the following: 
-
-1. Download the packages with `download_packages.sh`. 
+Before running either script, download the packages with `download_packages.sh`. This will:
+1. Download the packages listed in the `repos` variable.
 2. Install the modified `DocumenterMarkdown` from [https://github.com/PGimenez/DocumenterMarkdown.jl](https://github.com/PGimenez/DocumenterMarkdown.jl) to the `/docs/` folder of the package.
-3. Add `using DocumenterMakrdown` to `make.jl`, and change the `format` parameter in the call to `makedocs` to `format=Markdown()`
+3. Add `using DocumenterMarkdown` to `make.jl`, and change the `format` parameter in the call to `makedocs` to `format=Markdown()`
