@@ -31,7 +31,7 @@ fi
 # typeset -A folder_map
 # folder_map=("genie" "2.server" "stipple" "3.UI" "searchlight" "4.database")
 declare -A folder_map
-folder_map=( ["genie"]="2.server" ["stipple"]="3.UI" ["stippleui"]="3.UI/components" ["searchlight"]="4.database" )
+folder_map=( ["genie"]="2.server" ["stipple"]="3.UI"  ["stipple-v0.27.3"]="3.UI/v0.27.3" ["stippleui"]="3.UI/components" ["searchlight"]="4.database" )
 
 # Iterate over the arguments (folder names)
 for folder_name in "$@"; do
