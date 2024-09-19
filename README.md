@@ -6,7 +6,6 @@ This project builds the API documentation for packages in the Genie Framework. I
 
 The packages are listed in the `main.jl` script in the `package_info` variable. Each package has an url to download the source from, and an optional `docs_site_folder` field specifying the folder in the Genie docs site where the documentation should be placed.
 
-## Prerequisites
 
 
 ## Usage
