@@ -18,7 +18,15 @@ function parse_commandline()
             default = []
             required = false
     end
-    return parse_args(s)
+
+    args = parse_args(s)
+
+    # Ensure that only one of docs-site-root or output-folder is specified
+    if args["docs-site-root"] != "" && args["output-folder"] != "output/"
+        error("Please specify either --docs-site-root or --output-folder, not both.")
+    end
+
+    return args
 end
 
 function clone_or_update_repo(repo_url::String, folder_name::String, version::Union{String,Nothing}=nothing)
